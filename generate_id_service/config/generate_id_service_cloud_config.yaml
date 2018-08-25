@@ -1,0 +1,13 @@
+---
+# Description of aws ec2 instance
+
+ami: ami-a4dc46db
+init: ['#!/bin/bash','sudo apt-get update', 'sudo apt-get install docker -y', 
+'sudo apt-get install docker.io -y']
+role: arn:aws:iam::400029180276:instance-profile/worker_full_access
+region: us-east-1a
+type: t2.micro
+securityId: ['sg-9569addf', 'sg-eade92a1']
+key: DLNAkey
+securityGroup: ['HTTP_HTTPS', 'SSH']
+name: generate_id_service
